@@ -21,7 +21,7 @@ vector<vector<int>> mergeIntervals(vector<vector<int>> &interval)
         intervals.push_back(make_pair(interval[i][0], interval[i][1]));
     }
     sort(intervals.begin(), intervals.end(), comparator);
-    vector<pair<int,int>> mergedIntervals;
+    // vector<pair<int,int>> mergedIntervals;
     mergedIntervals.push_back(intervals[0]);
     for (int i = 1; i < intervals.size(); i++) {
         if (areOverlapping(mergedIntervals.back(), intervals[i])) {
